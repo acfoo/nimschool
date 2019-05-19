@@ -1,0 +1,45 @@
+Nim编译器版本0.19.6 [Windows：amd64]
+编译于2019-05-10
+版权所有（c）2006-2018作者：Andreas Rumpf
+::
+
+  nim command [options] [projectfile] [参数]
+
+command：
+   compile, c      使用默认代码生成器编译，编译项目（C） 
+   doc             生成inputfile的文档
+
+参数：
+ 参数传递给正在运行的程序（如果选择了--run选项）
+选项：
+ -p， --path：PATH                 添加路径到搜索路径
+ -d， --define：SYMBOL（：VAL）
+                                   定义条件符号
+                                   （可选：定义该符号的值，看：“编译时定义编译指示”）
+
+ -u， --undef：SYMBOL           取消定义条件符号
+ -f， --forceBuild              强制重建所有模块
+ --stackTrace：on | off         打开堆栈跟踪
+ --lineTrace：on | off          堆栈跟踪   开|关
+ --threads：on | off            多线程跟踪    开|关
+ -x， --check：on | off         关闭所有运行时检查
+ --objChecks：on | off          关闭obj转换检查
+ --fieldChecks：on | off        变量字段检查   开|关
+ --rangeChecks：on | off        范围检查  开|关
+ --boundChecks：on | off        关闭检查      开|关
+ --overflowChecks：on | off     int 上溢- / 下溢 检查  开|关
+ -a，--assertions：on | off     断言      开|关
+ --floatChecks：on | off        关闭所有浮点（NaN / Inf）检查
+ --nanChecks：on | off          NaN检查开|关
+ --infChecks：on | off          INF检查    开|关
+ --nilChecks：on | off          nil检验    开|关
+ --opt：none | speed | size     完全不优化或速度|大小
+                                     注意：使用-d：release发布版本！
+ --debugger：native | endb      使用本机调试器（gdb）| ENDB（实验性）
+ --app:console| GUI |lib | staticlib
+                                     生成控制台应用程序| GUI应用程序| DLL |静态库
+ -r， -run                      运行带有给定参数的已编译程序
+ --fullhelp                     显示所有命令行开关
+ -h， --help                    显示此帮助
+
+请注意，带参数的单字母选项需要冒号。例如。 -p：PATH。
